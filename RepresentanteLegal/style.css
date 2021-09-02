@@ -1,0 +1,375 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #f4f4f7;
+    font-family: 'Open Sans', sans-serif;
+}
+.principal{
+    height: 45px;
+}
+
+.tituloPrincipal{
+   position: relative;
+   right: 30px;
+}
+
+.repres{
+    text-align: left;
+}
+
+.imalapiz{
+    position: relative;
+    text-align: right;
+    top:-65px;
+    cursor:pointer;
+}
+
+.btn-lapiz{
+    cursor:pointer;
+    background: white;
+    border: none;
+}
+
+.formulario{
+    display:grid;
+    grid-template-columns: 1fr 1fr;/*ubicarlo en columnas*/
+    gap:20px;/*Espacio entre los elementos*/
+    width: 980px;
+    background: #FFFFFF;
+    padding:30px;
+    margin:auto;
+    margin-top:100px;/**/
+    border-radius:4px;
+    font-family: 'Open Sans';
+    color:black;
+    box-shadow:7px 13px 37px ;
+}
+
+.formulario__label{/*Caracteristicas de los titulos*/
+    display:block;
+    font-weight:700;/*Negrita*/
+    padding:10px; /*Distancia entre los elementos*/
+    cursor:pointer;
+}
+
+.formulario__grupo-input{
+    position: relative;
+}
+
+.tituloPrincipal {/*Modifica el titulo*/
+    font-size: 38px;
+    margin-bottom:20px;
+    color:#3c5ebb;
+    text-align: center
+}
+
+
+.formulario__input{
+    width:100%;
+    background: #FFFFFF;
+    /* background: #E8F0FE; */
+    border: 3px solid transparent;
+    padding: 0 40px 0 10px;
+    border-radius:6px;
+    margin-bottom: 10px;/*separacion de los textos*/
+    border: 0.5px solid #554343;
+    font-family: 'Open Sans';
+    font-size:16px;
+    color:black; /*Color del texto al escribir*/
+    height: 45px;
+    line-height:45;
+    transition: .3s ease all;
+}
+.formulario__input-color{
+    background: #f0f5ff;
+}
+
+.formulario p{
+    /* text-align:center; */
+    font-size:12.5px;
+ } 
+
+ .formulario__input-error{/*Error en la casilla*/
+    font-size:12px;
+    margin-bottom:0;
+    display:none;
+} 
+
+.formulario__input-errorn{/* Cuando la casilla esta vacia*/
+    font-size:12px;
+    margin-bottom:0;
+    display:none;
+} 
+
+.formulario__input-error-activo {
+    display:block;
+}
+
+.formulario__validacion-estado{/*Simbolos de error*/
+    position:absolute;
+    right:12px;
+    bottom:25px;
+    z-index:100;
+    font-size:16px;
+    opacity:0;/*Para que no se muestren las "x "*/
+}
+
+.formulario__mensaje-activo{
+    display: block;
+}
+.formulario__mensaje p{
+    margin:0;
+}
+
+.formulario a{
+    color:white;
+    text-decoration:none;
+}
+
+.formulario a:hover{
+    color:white;
+    text-decoration:underline;
+
+}
+.formulario__mensaje-exito{
+    font-size:14px;
+    color: #119200;
+    display: none;
+}
+
+.formulario .fomulario__btn{
+    width:35%;
+    background: #3876F9;
+    border: none;
+    padding:12px;
+    color:white;
+    margin: 16px 6px;
+    font-size: 16px;
+    cursor: pointer;
+    border :0;
+    border-radius: 20px;
+    left: 95px;
+    position: relative;
+}
+
+.fomulario__btn:hover{
+    background-color: #14539b; /*Hace que cambie de color cuando el cursor esté sobre el boton*/
+    color:black;
+}
+.formulario__input:disabled,
+.fomulario__btn:disabled{
+    background: rgba(240, 238, 238, 0.945);
+    color: #0d141fa8;
+    cursor: not-allowed
+}
+
+.formulario__mensaje{
+    height:45px;
+    width: 39%;
+    line-height: 45px;
+    background: #F66060;
+    padding: 0 15px;
+    border-radius: 6px;
+    display:none;
+    grid-column: span 2;
+    font-size: 30px;
+    margin-top:15px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.formulario__mensaje-activo{
+    display: block;
+}
+
+
+.formulario__mensaje-exito{
+    font-size:18px;
+    color: #119200;
+    display: none;
+}
+
+.formulario__mensaje-exito-activo{
+    display:block;
+}
+
+
+
+.formulario__grupo-correcto .formulario__validacion-estado{/*cambia el color de la X cuando esta correcto*/
+    color:#1ed12d;
+    opacity:1;
+}
+.formulario__grupo-incorrecto .formulario__label{ /*cambia el color del nombre cuando es incorrecto*/
+    color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado{/*cambia el color de la X cuando esta incorrecto*/
+    color:#bb2929;
+    opacity:1;
+}
+
+.formulario__grupo-incorrecto .formulario__input{/*cambia el color del recuadro cuando esta incorrecto*/
+    border: 2px solid #bb2929;
+}
+
+/***********************************Diseño de los selects*****************************/
+.listas{
+    height: 45px;
+    width:100%;
+    font-family: 'Open Sans';
+    border-radius:6px;
+    font-size :16px;
+    cursor:pointer;
+}
+
+.formulario__input::-webkit-scrollbar{
+    width: 8px;
+    
+}
+  
+.formulario__input::-webkit-scrollbar-thumb{
+   
+    background: rgb(21, 23, 153);
+    border-radius: 5px;
+}
+
+
+/* .custom-arrow{
+    background: red;
+} */
+
+
+
+
+/*********************************Diseño del select*********************/
+
+/* .select-box{
+    display:flex;
+   
+    width:100%;
+  
+    flex-direction: column;
+}
+
+.select-box .options-container3,
+.select-box .options-container2,
+.select-box .options-container{
+    color:black;
+    width:100%;
+    transition: all 0.4s;
+    max-height:0;
+    opacity:0;
+   
+
+    border-radius:8px;
+    overflow: hidden;
+    order:1;
+    border: 0.5px solid #554343;
+ 
+   
+
+} */
+
+/* .select-box .options-container.active{
+    max-height:240px;
+    opacity:1;
+    overflow-y: scroll;
+}
+
+.select-box .options-container2.active{
+    max-height:240px;
+    opacity:1;
+    overflow-y: scroll;
+}
+
+.select-box .options-container3.active{
+    max-height:240px;
+    opacity:1;
+    overflow-y: scroll;
+}
+
+
+.select-box .options-container3::webkit-scrollbar,
+.select-box .options-container2::webkit-scrollbar,
+.select-box .options-container::webkit-scrollbar{
+    width:8px;
+    background: #0d141f; /*Para cambiar el color del scroll*/
+    /* border-radius: 0 8px 8px 0;
+}
+.select-box .options-container3::webkit-scrollbar-thumb,
+.select-box .options-container2::webkit-scrollbar-thumb,
+.select-box .options-container::webkit-scrollbar-thumb{
+    background: #525861;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .option3,
+.select-box .option2,
+.select-box .option,
+.selected3,
+.selected2,
+.selected{
+
+    padding: 12px 24px;
+    cursor: pointer;
+}
+.select-box .option3:hover,
+.select-box .option2:hover,
+.select-box .option:hover{ /**Cuando el cursor pasa por encima*/
+    /* background:#79a1f8;
+}
+
+.select-box label{
+    cursor: pointer;
+}
+.select-box .option3 .radio,
+.select-box .option2 .radio,
+.select-box .option .radio{
+    display:none;/*Le quita el "punto" al type radio*/
+/* }
+.selected3,
+.selected2,
+.selected{
+ 
+    border-radius:8px;
+    margin-bottom: 8px;
+    position:relative;
+    order:0;
+    border: 0.5px solid #554343;
+  
+}
+.selected3::after,
+.selected2::after,
+.selected::after{
+  content:"";
+  background: url("img/arrow-down.png") ; 
+  background-size: 18px; 
+  
+  background-repeat: no-repeat; 
+
+  position:absolute;
+  height:100%;
+  width: 32px;
+  right:-1px;
+  top:15px;
+  transition:all 0.4s;
+  bottom:25px;
+  z-index:100;
+  font-size:15px;
+}
+
+ .select-box .options-container3.active + .selected3::after,
+.select-box .options-container2.active + .selected2::after, 
+
+.select-box .options-container.active + .selected::after{
+    transform:rotateX(180deg) ;
+    top:-13px;
+}
+.formulario__grupo-btn-enviar{
+    float:right;
+   
+} */ 
